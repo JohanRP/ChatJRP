@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </head>
+<body>
+
+    <form action="/resumir" method="post">
+        <h1><label for="nombre">Ingresa Texto a Resumir:</label></h1>
+        <input type="text" id="nombre" name="nombre">
+        <button class="btn" type="submit">Resumir</button>
+    </form>
+
+    <h1>Tu Resumen:</h1>
+    <div class="home-content">
+        <p>{{ resumen }}</p>
+    </div>
+    
+    <!-- Latest compiled and minified CSS -->
+
+</body>
+</html>

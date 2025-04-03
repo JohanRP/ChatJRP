@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 :root{
---color-primary:#121e29;
+--color-primary:#151726;
 --color-accent:#D9D9D9;
 --color-dark:#234757;
 --color-medium:#468fa0;
@@ -62,7 +62,7 @@ header{
 nav a{
     font-size: 1.8rem;
     color: var(--color-accent);
-    margin-left: 4rem;
+    margin-left: 3rem;
     font-weight: 500;
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
@@ -78,14 +78,15 @@ nav a.active{
 
     nav{
         position: absolute;
-        top: 100%;
+        display: none;
+        top: 0;
         right: 0;
         width: 40%;
         border-left: 3px solid var(--color-light);
         border-bottom: 3px solid var(--color-light);
         border-bottom-left-radius: 2rem;
         padding: 1rem solid;
-        background-color: #161616;
+        background-color: var(--color-primary);
         border-top: 0.1rem solid rgba(0,0,0,0.1);
     }
 
@@ -104,17 +105,17 @@ nav a.active{
         border-radius: 0.5rem;
         border-bottom: 0.5rem solid var(--color-light);
     }
-
+}
     section{
         min-height: 100vh;
-        padding: 5rem  9% 5rem;
+        padding: 5rem 9% 5rem;
     }
     .home{
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 8rem;
-        background-color: black;
+        background-color: var(--color-primary);
     }
 
     .home .home-content h1{
@@ -131,6 +132,10 @@ nav a.active{
         font-size: 4rem;
         margin-bottom: 1rem;
         font-weight: 700;
+    }
+
+    .home-content p{
+        font-size: 1.6rem;
     }
 
     .home-img{
@@ -161,6 +166,107 @@ nav a.active{
         font-size: 2rem;
         border-radius: 50%;
         margin: 3rem 1.5rem 3rem 0;
+        transition: 0.3s ease;
+        color: var(--color-accent);
     }
 
-}
+    .secciones a:hover{
+        color: var(--color-light);
+        transform:scale(1.3) translateY(-5px);
+        box-shadow: 0 0 25px var(--color-light);
+    }
+
+    .btn{
+        display: inline-block;
+        padding: 1rem 2.8rem;
+        background-color: var(--color-primary);
+        border-radius: 4rem;
+        font-size: 1.6rem;
+        color: var(--color-light);
+        letter-spacing: 0.3rem;
+        font-weight: 600;
+        border: 2px solid var(--color-light);
+        transition: 0.3s ease;
+        cursor: pointer;
+    }
+
+    .btn:hover{
+        transform: scale3d(1.3);
+        background-color: var(--color-light);
+        color: var(--color-primary);
+        box-shadow: 0 0 25px var(--color-light);
+    }
+
+    .typing-text{
+        font-size: 34px;
+        font-weight: 600;
+        min-width: 280px;
+    }
+
+    .typing-text span{
+        position: relative;
+    }
+
+    .typing-text span::before{
+        content:"Ayudarte";
+        color: var(--color-light);
+        animation: words 10s infinite;
+    }
+
+    .typing-text span::after{
+        content: "";
+        background-color: transparent;
+        position: absolute;
+        width: calc(100% + 8px);
+        height: 100%;
+        border-left: 3px solid var(--color-primary);
+        right: -8;
+        animation: cursor 0.6s infinite;
+    }
+
+    @keyframes cursor {
+        to{
+            border-left: 3px solid var(--color-light);
+        }
+    }
+    @keyframes words {
+        0%, 25%{
+            content: "Traducir";
+        }
+        26%,50%{
+            content: "Aclarar Dudas";
+        }
+        51%,75%{
+            content: "Generar Preguntas";
+        }
+        76%,100%{
+            content: "Resumir";
+        }
+    }
+
+    @media (max-width:1000px){
+        .home{
+            gap: 4rem;
+        }
+    }
+
+    @media (max-width:995px){
+        .home{
+            flex-direction: column;
+            margin: 5rem 4rem;
+        }
+
+        .home .home-content h3{
+            font-size: 2.5rem;
+        }
+
+        .home .home-content h1{
+            font-size: 5rem;
+        }
+
+        .home-img img{
+            width: 70vw;
+            margin-top: 4rem;
+        }
+    }
+
