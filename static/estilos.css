@@ -230,17 +230,21 @@ nav a.active{
         }
     }
     @keyframes words {
-        0%, 25%{
+        0%, 20%{
             content: "Traducir";
         }
-        26%,50%{
+        21%,40%{
             content: "Aclarar Dudas";
         }
-        51%,75%{
+        41%,60%{
             content: "Generar Preguntas";
         }
-        76%,100%{
+        61%,80%{
             content: "Resumir";
+        }
+
+        81%,100%{
+            content: "Generar Imagenes";
         }
     }
 
@@ -269,4 +273,11 @@ nav a.active{
             margin-top: 4rem;
         }
     }
+
+    .inputs{
+        border: 2px solid var(--color-light);
+        width: 50rem;
+        height: 3rem;
+    }
+
 

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+
+    <title>ChatJRP</title>
+
+</head>
+<body>
+    <header class="navbar">
+        <a class="logo">ChatJRP</a>
+        <nav>
+            <a href="/">Inicio</a>
+            <a href="#" class="active">Traductor</a>
+            <a href="/responder">Responder</a>
+            <a href="/generar">Generar</a>
+            <a href="/resumen">Resumir</a>
+            <a href="/imagen">Imagen</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-img">
+            <img src="/static/principal.jpg" alt="">
+        </div>
+        
+        <div class="home-content">
+            <form action="/traducir" method="post">
+            <h1>Preparado Para <span>Traducir</span></h1>
+            <h3 class="typing-text">Ingresa Tu Texto A Traducir</h3>
+            <input type="text" name="texto" id="texto">
+            <p>{{traduccion}}</p>
+           <button type="submit" class="btn">Traduce</button>
+        </form>
+        </div>
+    
+        
+    </section>
+    
+</body>
+</html>

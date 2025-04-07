@@ -17,9 +17,9 @@
         <nav>
             <a href="/">Inicio</a>
             <a href="/traductor">Traductor</a>
-            <a href="/responder">Responder</a>
-            <a href="/generar" >Generar</a>
-            <a href="#" class="active">Resumir</a>
+            <a href="#" class="active">Responder</a>
+            <a href="/generar">Generar</a>
+            <a href="/resumen">Resumir</a>
             <a href="/imagen">Imagen</a>
         </nav>
     </header>
@@ -28,21 +28,23 @@
             <img src="/static/principal.jpg" alt="">
         </div>
         <div class="home-content">
-            <form action="/resumir" method="post">
-            <h1>Hola, ingresa un texto para <span>Resumir Texto</span></h1>
-            <h3 class=""><input name="nombre" id="nombre" class="inputs" type="text"></h3>
-            <button class="btn" type="submit">Resumir</button>
-            <p>{{resumen}}</p>
+            <form action="/respuesta" method="post">
+            <h1>Hola, Puedo Ayudarte A <span>Aclarar Dudas</span></h1>
+            <h3 class=""><input name="texto" id="texto" class="inputs" type="text"></h3>
+            <button class="btn" type="submit">Responder</button>
+            <p>{{respuesta}}</p>
+            <div class="secciones">
+                <a href="/traductor"><i class="fa fa-language"></i></a>
+                <a href="/responder"><i class="fa-regular fa-comment"></i></a>
+                <a href="/generar"><i class="fa-regular fa-pen-to-square"></i></a>
+                <a href="/resumen"><i class="fa-regular fa-rectangle-list"></i></a>
+                <a href="/imagen"><i class="fa-regular fa-image"></i></a>
+            </div>
             
         </div>
     </form>
         
     </section>
     
-</body>
-</html>
-    
-    <!-- Latest compiled and minified CSS -->
-
 </body>
 </html>

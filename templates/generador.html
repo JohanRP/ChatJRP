@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+    <link rel="stylesheet" href="/static/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+
+    <title>ChatJRP</title>
+
+</head>
+<body>
+    <header class="navbar">
+        <a class="logo">ChatJRP</a>
+        <nav>
+            <a href="/">Inicio</a>
+            <a href="/traductor">Traductor</a>
+            <a href="/responder">Responder</a>
+            <a href="#" class="active">Generar</a>
+            <a href="/resumen">Resumir</a>
+            <a href="/imagen">Imagen</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-img">
+            <img src="/static/principal.jpg" alt="">
+        </div>
+        <div class="home-content">
+            <form action="/generarP" method="post">
+            <h1>Hola, ingresa un texto para <span>Generar Preguntas</span></h1>
+            <h3 class=""><input name="texto" id="texto" class="inputs" type="text"></h3>
+            <button class="btn" type="submit">Resumir</button>
+            <p>{{pregunta}}</p>
+            <div class="secciones">
+                <a href="/traductor"><i class="fa fa-language"></i></a>
+                <a href="/responder"><i class="fa-regular fa-comment"></i></a>
+                <a href="/generar"><i class="fa-regular fa-pen-to-square"></i></a>
+                <a href="/resumen"><i class="fa-regular fa-rectangle-list"></i></a>
+                <a href="/imagen"><i class="fa-regular fa-image"></i></a>
+            </div>
+            
+        </div>
+    </form>
+        
+    </section>
+    
+</body>
+</html>
